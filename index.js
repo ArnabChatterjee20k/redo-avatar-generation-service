@@ -33,7 +33,7 @@ app.post("/avatar", upload.single("avatar"), async (req, res) => {
     );
     const bitmoji = await generateBitmoji(ans)
     const uri = await downloadImage(bitmoji)
-    await new BitMoji({id,bucketURI:bitmoji}).save()
+    await new BitMoji({userId:id,bucketURI:bitmoji}).save()
     res.json(uri)
 });
 
