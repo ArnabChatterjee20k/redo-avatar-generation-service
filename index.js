@@ -1,7 +1,7 @@
 const express = require("express");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const fs = require("fs");
 const BitMoji = require("./schema")
 const multer = require("multer");
